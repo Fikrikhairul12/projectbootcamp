@@ -59,22 +59,21 @@ class RegisterView extends GetView<RegisterController> {
                     backgroundColor: Color(0xff0098ff),
                   ),
                   onPressed: () async {
-                    // String email = emailController.text;
-                    // String password = passwordController.text;
-                    // String confirmPassword = confirmPasswordController.text;
-                    // if (password == confirmPassword) {
-                    //   try {
-                    //     final result = await FirebaseAuth.instance
-                    //         .createUserWithEmailAndPassword(
-                    //       email: email,
-                    //       password: password,
-                    //     );
-                    //     print('bikin user');
-                    //     Get.offAllNamed(Routes.HOME);
-                    //   } on FirebaseAuthException catch (e) {
-                    //     print('Error: $e');
-                    //   }
-                    // }
+                    String email = emailController.text;
+                    String password = passwordController.text;
+                    String confirmPassword = confirmPasswordController.text;
+                    if (password == confirmPassword) {
+                      try {
+                        final result = await FirebaseAuth.instance
+                            .createUserWithEmailAndPassword(
+                          email: email,
+                          password: password,
+                        );
+                        Get.offAllNamed(Routes.HOME);
+                      } on FirebaseAuthException catch (e) {
+                        print('Error: $e');
+                      }
+                    }
                   },
                   child: Text(
                     'Sign Up',

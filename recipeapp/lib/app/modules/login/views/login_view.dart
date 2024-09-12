@@ -70,18 +70,18 @@ class LoginView extends GetView<LoginController> {
                     backgroundColor: Color(0xff0098ff),
                   ),
                   onPressed: () async {
-                    // String email = emailController.text;
-                    // String password = passwordController.text;
-                    // try {
-                    //   await FirebaseAuth.instance
-                    //       .signInWithEmailAndPassword(
-                    //     email: email,
-                    //     password: password,
-                    //   );
-                    //   Get.offAllNamed(Routes.HOME);
-                    // } on FirebaseAuthException catch (e) {
-                    //   print('Error: $e');
-                    // }
+                    String email = emailController.text;
+                    String password = passwordController.text;
+                    try {
+                      await FirebaseAuth.instance
+                          .signInWithEmailAndPassword(
+                        email: email,
+                        password: password,
+                      );
+                      Get.offAllNamed(Routes.HOME);
+                    } on FirebaseAuthException catch (e) {
+                      print('Error: $e');
+                    }
                   },
                   child: Text(
                     'Login',
