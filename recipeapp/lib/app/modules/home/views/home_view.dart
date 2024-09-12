@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:recipeapp/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -13,10 +15,25 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              'HomeView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+            SizedBox(
+              width: 100,
+              height: 60,
+              child: ElevatedButton(
+                onPressed: () async {
+                  await FirebaseAuth.instance.signOut();
+                  Get.offAllNamed(Routes.GETSTARTED);
+                },
+                child: Text('Logout')
+              ),
+            )
+          ],
         ),
       ),
     );
