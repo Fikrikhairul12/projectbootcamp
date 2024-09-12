@@ -5,6 +5,8 @@ import '../modules/getstarted/views/getstarted_view.dart';
 import '../modules/getstarted/views/splashscreen.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/list_menu/bindings/list_menu_binding.dart';
+import '../modules/list_menu/views/list_menu_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/register/bindings/register_binding.dart';
@@ -42,6 +44,11 @@ class AppPages {
       name: _Paths.REGISTER,
       page: () => const RegisterView(),
       binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIST_MENU,
+      page: () => const ListMenuView(),
+      binding: ListMenuBinding(),
     ),
   ];
 }

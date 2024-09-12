@@ -99,7 +99,7 @@ class RegisterView extends GetView<RegisterController> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.toNamed(Routes.LOGIN);
+                      Get.offNamed(Routes.LOGIN);
                     },
                     child: Text(
                       '  Login',
