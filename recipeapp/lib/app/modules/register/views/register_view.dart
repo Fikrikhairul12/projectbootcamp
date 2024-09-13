@@ -43,10 +43,12 @@ class RegisterView extends GetView<RegisterController> {
               CustomTextFormField(
                 label: 'Password',
                 controller: passwordController,
+                isPassword: true,
               ),
               CustomTextFormField(
                 label: 'Confirm Password',
                 controller: confirmPasswordController,
+                isPassword: true,
               ),
               SizedBox(
                 width: 293,

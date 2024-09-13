@@ -42,6 +42,7 @@ class LoginView extends GetView<LoginController> {
               CustomTextFormField(
                 label: 'Password',
                 controller: passwordController,
+                isPassword: true,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -138,7 +139,7 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

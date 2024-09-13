@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recipeapp/app/modules/home/widget/home_widget.dart';
 import 'package:recipeapp/app/routes/app_pages.dart';
-
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -160,6 +159,92 @@ class HomeView extends GetView<HomeController> {
                         ),
                       ]
                     )
+                  ),
+                ],
+              ),
+              SizedBox(height: 30),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Favorite Food',
+                    style: GoogleFonts.workSans(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black
+                    )
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        RecipeCard(
+                          title: 'Healthy Taco Salad',
+                          subtitle: "with fresh vegetable",
+                          imageUrl: "assets/images/fvfood1.png",
+                          calories: "120 Kcal",
+                          time: "20 Min"
+                        ),
+                        RecipeCard(
+                          title: 'Mushroom Pizza',
+                          subtitle: "and Caramelized Onion ",
+                          imageUrl: "assets/images/fvfood2.png",
+                          calories: "200 Kcal",
+                          time: "30 Min"
+                        ),
+                        RecipeCard(
+                          title: 'Chicken Pasta',
+                          subtitle: "Dump-and-Bake Buffalo",
+                          imageUrl: "assets/images/fvfood3.png",
+                          calories: "400 Kcal",
+                          time: "30 Min"
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 30),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Favorite Drink',
+                    style: GoogleFonts.workSans(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black
+                    )
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        RecipeCard(
+                          title: 'Avocado Juice',
+                          subtitle: "with Milk and Sugar",
+                          imageUrl: "assets/images/fvdrink1.png",
+                          calories: "300 Kcal",
+                          time: "20 Min"
+                        ),
+                        RecipeCard(
+                          title: 'Blackberry Strawberry ',
+                          subtitle: "Banana Smoothie ",
+                          imageUrl: "assets/images/fvdrink2.png",
+                          calories: "120 Kcal",
+                          time: "10 Min"
+                        ),
+                        RecipeCard(
+                          title: 'Iced Matcha Latte',
+                          subtitle: "with Almond Milk",
+                          imageUrl: "assets/images/fvdrink3.png",
+                          calories: "30 Kcal",
+                          time: "10 Min"
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
