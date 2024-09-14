@@ -1,4 +1,4 @@
-name: recipeapp
+name: Flavorite
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,6 +40,7 @@ dependencies:
   google_fonts: ^6.2.1
   dio: ^5.7.0
   firebase_auth: ^5.2.1
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:

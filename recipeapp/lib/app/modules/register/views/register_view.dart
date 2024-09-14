@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:recipeapp/app/modules/register/widget/register_widget.dart';
-import 'package:recipeapp/app/routes/app_pages.dart';
+import 'package:Flavorite/app/modules/register/widget/register_widget.dart';
+import 'package:Flavorite/app/routes/app_pages.dart';
 
 import '../controllers/register_controller.dart';
 
@@ -71,7 +71,7 @@ class RegisterView extends GetView<RegisterController> {
                           email: email,
                           password: password,
                         );
-                        Get.offAllNamed(Routes.HOME);
+                        Get.offAllNamed(Routes.BOTTOMBAR);
                       } on FirebaseAuthException catch (e) {
                         print('Error: $e');
                       }

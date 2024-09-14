@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:recipeapp/app/routes/app_pages.dart';
+import 'package:Flavorite/app/routes/app_pages.dart';
 
 import '../controllers/getstarted_controller.dart';
 

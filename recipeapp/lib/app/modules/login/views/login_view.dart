@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:recipeapp/app/modules/login/widget/login_widget.dart';
-import 'package:recipeapp/app/routes/app_pages.dart';
+import 'package:Flavorite/app/modules/login/widget/login_widget.dart';
+import 'package:Flavorite/app/routes/app_pages.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -79,7 +79,7 @@ class LoginView extends GetView<LoginController> {
                         email: email,
                         password: password,
                       );
-                      Get.offAllNamed(Routes.HOME);
+                      Get.offAllNamed(Routes.BOTTOMBAR);
                     } on FirebaseAuthException catch (e) {
                       print('Error: $e');
                     }

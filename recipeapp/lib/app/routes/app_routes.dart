@@ -9,6 +9,9 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const REGISTER = _Paths.REGISTER;
   static const LIST_MENU = _Paths.LIST_MENU;
+  static const SETTINGS = _Paths.SETTINGS;
+  static const DETAIL = _Paths.DETAIL;
+  static const BOTTOMBAR = _Paths.BOTTOMBAR;
 }
 
 abstract class _Paths {
@@ -19,4 +22,7 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const REGISTER = '/register';
   static const LIST_MENU = '/list-menu';
+  static const SETTINGS = '/settings';
+  static const DETAIL = '/detail';
+  static const BOTTOMBAR = '/bottombar';
 }

@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:recipeapp/app/modules/home/widget/home_widget.dart';
-import 'package:recipeapp/app/routes/app_pages.dart';
+import 'package:Flavorite/app/modules/home/widget/home_widget.dart';
+import 'package:Flavorite/app/routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -52,27 +52,12 @@ class HomeView extends GetView<HomeController> {
                     )
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.SETTINGS);
+                    },
                     icon: Icon(Icons.settings), iconSize: 40,
                   )
                 ],
-              ),
-              SizedBox(height: 30,),
-              TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color(0xffF5F5F5),
-                  labelText: 'Search',
-                  hintText: 'Insert the main ingredients',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  ),
-                ),
-                onChanged: (value) { //! Sementara
-                  // Fungsi yang dipanggil setiap kali input berubah
-                  print('Searching for: $value');
-                },
               ),
               SizedBox(height: 30,),
               Column(
@@ -248,18 +233,6 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ],
               ),
-              SizedBox(height: 30,),
-              SizedBox( //! Sementara
-                width: 80,
-                height: 60,
-                child: ElevatedButton(
-                  onPressed: () async {
-                    await FirebaseAuth.instance.signOut();
-                    Get.offAllNamed(Routes.GETSTARTED);
-                  },
-                  child: Text('Logout')
-                ),
-              )
             ],
           ),
         ),
@@ -267,24 +240,3 @@ class HomeView extends GetView<HomeController> {
     );
   }
 }
-
-
-              // Column(
-              //   children: [
-                  // Text(
-                  //   'HomeView is working',
-                  //   style: TextStyle(fontSize: 20),
-                  // ),
-                  // SizedBox(
-                  //   width: 100,
-                  //   height: 60,
-                  //   child: ElevatedButton(
-                  //     onPressed: () async {
-                  //       await FirebaseAuth.instance.signOut();
-                  //       Get.offAllNamed(Routes.GETSTARTED);
-                  //     },
-                  //     child: Text('Logout')
-                  //   ),
-                  // )
-                // ],
-              // ),

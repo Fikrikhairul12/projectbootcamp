@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/bottombar/bindings/bottombar_binding.dart';
+import '../modules/bottombar/views/bottombar_view.dart';
+import '../modules/detail/bindings/detail_binding.dart';
+import '../modules/detail/views/detail_view.dart';
 import '../modules/getstarted/bindings/getstarted_binding.dart';
 import '../modules/getstarted/views/getstarted_view.dart';
 import '../modules/getstarted/views/splashscreen.dart';
@@ -11,6 +15,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
+import '../modules/settings/bindings/settings_binding.dart';
+import '../modules/settings/views/settings_view.dart';
 
 part 'app_routes.dart';
 
@@ -47,8 +53,23 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LIST_MENU,
-      page: () => const ListMenuView(),
+      page: () => ListMenuView(),
       binding: ListMenuBinding(),
+    ),
+    GetPage(
+      name: _Paths.SETTINGS,
+      page: () => const SettingsView(),
+      binding: SettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL,
+      page: () => const DetailView(),
+      binding: DetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOMBAR,
+      page: () => BottombarView(),
+      binding: BottombarBinding(),
     ),
   ];
 }
