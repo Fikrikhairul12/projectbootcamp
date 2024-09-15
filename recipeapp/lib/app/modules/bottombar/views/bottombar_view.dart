@@ -40,4 +40,3 @@ class BottombarView extends GetView<BottombarController> {
     );
   }
 }
-

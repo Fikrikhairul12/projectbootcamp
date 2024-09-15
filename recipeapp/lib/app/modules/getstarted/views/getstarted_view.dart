@@ -64,7 +64,7 @@ class GetstartedView extends GetView<GetstartedController> {
                     'Login',
                     style: GoogleFonts.workSans(
                       fontSize: 24,
-                      color: Colors.black, // Text color
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

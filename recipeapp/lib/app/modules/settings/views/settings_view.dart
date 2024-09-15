@@ -42,8 +42,8 @@ class SettingsView extends GetView<SettingsController> {
                   ),
                   SettingItem(
                     imagePath: 'assets/icons/icon-news.png',
-                    title: 'News settings',
-                    subtitle: 'Choose your favourite topics',
+                    title: 'Recipe settings',
+                    subtitle: 'Choose your favourite recipes',
                     onTap: () {
                       // Tambahkan aksi ketika item ditekan
                     },

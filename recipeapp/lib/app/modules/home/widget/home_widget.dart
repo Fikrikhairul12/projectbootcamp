@@ -25,8 +25,8 @@ class RecipeCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Container(
-        width: 250, // Lebar card
-        padding: const EdgeInsets.all(16), // Padding dalam card
+        width: 250,
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
@@ -37,15 +37,15 @@ class RecipeCard extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: Image.asset(
-                imageUrl, // Gambar diambil dari parameter
-                height: 150, // Tinggi gambar
-                width: double.infinity, // Lebar gambar penuh
+                imageUrl,
+                height: 150,
+                width: double.infinity,
                 fit: BoxFit.cover,
               ),
             ),
-            const SizedBox(height: 16), // Jarak antara gambar dan teks
+            const SizedBox(height: 16),
             Text(
-              title, // Title dari parameter
+              title,
               style: GoogleFonts.workSans(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -53,13 +53,13 @@ class RecipeCard extends StatelessWidget {
               ),
             ),
             Text(
-              subtitle, // Subtitle dari parameter
+              subtitle,
               style: GoogleFonts.workSans(
                 fontSize: 16,
                 color: Colors.black54,
               ),
             ),
-            const SizedBox(height: 16), // Jarak antara teks dan ikon
+            const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -68,7 +68,7 @@ class RecipeCard extends StatelessWidget {
                     const Icon(Icons.local_fire_department, color: Colors.orange),
                     const SizedBox(width: 5),
                     Text(
-                      calories, // Kalori dari parameter
+                      calories,
                       style: const TextStyle(color: Colors.grey),
                     ),
                   ],
@@ -78,7 +78,7 @@ class RecipeCard extends StatelessWidget {
                     const Icon(Icons.access_time, color: Colors.grey),
                     const SizedBox(width: 5),
                     Text(
-                      time, // Waktu dari parameter
+                      time,
                       style: const TextStyle(color: Colors.grey),
                     ),
                   ],

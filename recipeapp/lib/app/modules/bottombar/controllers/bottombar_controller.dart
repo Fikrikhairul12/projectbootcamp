@@ -7,6 +7,5 @@ class BottombarController extends GetxController {
 
   void changeTab(int index) {
     currentIndex.value = index;
-    // Get.offNamed(routes[index]);
   }
 }

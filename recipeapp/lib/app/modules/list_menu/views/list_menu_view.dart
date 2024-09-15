@@ -30,7 +30,7 @@ class ListMenuView extends StatelessWidget {
               ),
               onSubmitted: (value) {
                 controller
-                    .fetchRecipes(value); // Fetch recipes when user submits
+                    .fetchRecipes(value);
               },
             ),
           ),
@@ -48,7 +48,6 @@ class ListMenuView extends StatelessWidget {
                         vertical: 8.0, horizontal: 16.0),
                     child: InkWell(
                       onTap: () {
-                        // Fetch detail dari resep berdasarkan ID yang didapat dari complexSearch
                         controller.fetchRecipeDetails(recipe['id']);
                       },
                       borderRadius: BorderRadius.circular(10),
@@ -66,7 +65,6 @@ class ListMenuView extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            // Gambar pada sebelah kiri
                             ClipRRect(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10),
@@ -74,7 +72,7 @@ class ListMenuView extends StatelessWidget {
                               ),
                               child: Image.network(
                                 recipe[
-                                    'image'], // Tampilkan gambar dari hasil complexSearch
+                                    'image'],
                                 width: 120,
                                 height: 100,
                                 fit: BoxFit.cover,
@@ -82,7 +80,6 @@ class ListMenuView extends StatelessWidget {
                                     Icon(Icons.error),
                               ),
                             ),
-                            // Teks pada sebelah kanan
                             Expanded(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -100,7 +97,7 @@ class ListMenuView extends StatelessWidget {
                                       ),
                                       maxLines: 1,
                                       overflow: TextOverflow
-                                          .ellipsis, // Menambahkan ellipsis jika teks terlalu panjang
+                                          .ellipsis,
                                     ),
                                   ],
                                 ),

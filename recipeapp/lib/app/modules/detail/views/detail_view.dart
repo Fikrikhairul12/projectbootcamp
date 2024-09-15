@@ -6,17 +6,17 @@ class DetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final recipe = Get.arguments;  // Get the passed recipe details from arguments
+    final recipe = Get.arguments;
 
     return Scaffold(
-      backgroundColor: Color(0xffF2F3F5), // Warna background yang lebih lembut
+      backgroundColor: Color(0xffF2F3F5),
       appBar: AppBar(
         title: Text(
           recipe['title'] ?? 'Recipe Detail',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xffA8D5BA), // Mengganti warna AppBar agar lebih menarik
+        backgroundColor: Color(0xffA8D5BA),
       ),
       body: ListView(
         children: [
@@ -25,7 +25,6 @@ class DetailView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Card untuk menampilkan gambar resep
                 Card(
                   elevation: 4,
                   shape: RoundedRectangleBorder(
@@ -41,9 +40,8 @@ class DetailView extends StatelessWidget {
                       Icon(Icons.error, size: 100, color: Colors.grey),
                   ),
                 ),
-                SizedBox(height: 24), // Jarak antara gambar dan teks
+                SizedBox(height: 24),
 
-                // Menampilkan nama resep dengan gaya menonjol
                 Text(
                   recipe['title'] ?? 'Recipe',
                   style: TextStyle(
@@ -52,9 +50,9 @@ class DetailView extends StatelessWidget {
                     color: Colors.black87,
                   ),
                 ),
-                SizedBox(height: 16), // Jarak setelah judul
+                SizedBox(height: 16),
                 
-                Divider(), // Pembatas antara judul dan konten
+                Divider(),
 
                 // Ingredients Section
                 Text(
@@ -66,7 +64,6 @@ class DetailView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 8),
-                // Ingredients List
                 ...List.generate(recipe['extendedIngredients'].length, (index) {
                   var ingredient = recipe['extendedIngredients'][index];
                   return Padding(
@@ -79,7 +76,6 @@ class DetailView extends StatelessWidget {
                 }),
                 SizedBox(height: 24),
 
-                // Instructions Section
                 Text(
                   'Instructions:',
                   style: TextStyle(
@@ -89,7 +85,6 @@ class DetailView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 8),
-                // Instructions Text
                 Text(
                   recipe['instructions'] ?? 'No instructions available',
                   style: TextStyle(fontSize: 16, color: Colors.black54),

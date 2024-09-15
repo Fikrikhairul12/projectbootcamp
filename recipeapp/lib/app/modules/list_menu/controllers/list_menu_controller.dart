@@ -27,13 +27,12 @@ class ListMenuController extends GetxController {
 }
 
 class RecipesController extends GetxController {
-  var isLoading = false.obs; // Menggunakan GetX observable
-  var recipesList = [].obs;  // Observable untuk menyimpan daftar resep
+  var isLoading = false.obs;
+  var recipesList = [].obs;
   var recipeDetails = {}.obs;
 
   final FlavoriteService _flavoriteService = FlavoriteService();
 
-  // Fungsi untuk mendapatkan resep berdasarkan query
   void fetchRecipes(String query) async {
     try {
       isLoading(true);
@@ -43,7 +42,7 @@ class RecipesController extends GetxController {
       var response = await http.get(url);
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
-        recipesList.value = data['results']; // Save the search results to the list
+        recipesList.value = data['results'];
       } else {
         Get.snackbar('Error', 'Failed to fetch recipes');
       }
@@ -52,23 +51,6 @@ class RecipesController extends GetxController {
     } finally {
       isLoading(false);
     }
-
-
-    // try {
-    // isLoading(true);
-    // var response = await http.get(Uri.parse(
-    //     'https://api.spoonacular.com/recipes/complexSearch?query=$query&number=10&apiKey=YOUR_API_KEY'));
-    // if (response.statusCode == 200) {
-    //   var data = jsonDecode(response.body);
-    //   recipesList.value = data['results']; // Simpan hasil pencarian di recipesList
-    // } else {
-    //   Get.snackbar('Error', 'Failed to fetch recipes');
-    // }
-    // } catch (e) {
-    //   Get.snackbar('Error', 'Something went wrong');
-    // } finally {
-    //   isLoading(false);
-    // }
   }
 
   void fetchRecipeDetails(int recipeId) async {
@@ -80,8 +62,8 @@ class RecipesController extends GetxController {
       var response = await http.get(url);
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
-        recipeDetails.value = data; // Save recipe details for further use
-        Get.toNamed('/detail', arguments: recipeDetails); // Navigate to the detail view
+        recipeDetails.value = data;
+        Get.toNamed('/detail', arguments: recipeDetails);
       } else {
         Get.snackbar('Error', 'Failed to fetch recipe details');
       }
